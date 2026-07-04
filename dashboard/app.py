@@ -722,7 +722,12 @@ if nav_view == "📊 Heat Intelligence Dashboard":
             fig_s.update_layout(
                 paper_bgcolor='rgba(0,0,0,0)',
                 plot_bgcolor='rgba(0,0,0,0)',
-                xaxis=dict(showgrid=False, title="Impact (°C)", titlefont=dict(size=10), color=sec_text_color, tickfont=dict(size=10)),
+                xaxis=dict(
+                    showgrid=False, 
+                    title=dict(text="Impact (°C)", font=dict(size=10)), 
+                    color=sec_text_color, 
+                    tickfont=dict(size=10)
+                ),
                 yaxis=dict(autorange="reversed", color=sec_text_color, tickfont=dict(size=10)),
                 margin=dict(l=5, r=5, t=5, b=5),
                 height=180
