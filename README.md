@@ -9,35 +9,7 @@ UrbanCool AI is a high-fidelity planning and simulation platform designed to mod
 
 UrbanCool AI is structured as a modular four-layer system:
 
-```mermaid
-graph TD
-    subgraph Data Layer
-        A[data_generator.py] -->|Generates| B[locations.csv]
-        A -->|Generates| C[dataset.csv]
-    end
-    subgraph Model Layer
-        C -->|Train| D[train_model.py]
-        D -->|Saves| E[model.pkl]
-        D -->|Saves| F[encoder.pkl]
-    end
-    subgraph Core Analytical Engines
-        E & F --> Pre[preprocess.py]
-        E --> Sim[simulation.py]
-        E --> Shap[shap_analysis.py]
-        Heat[heat_score.py]
-        Rec[recommend.py]
-    end
-    subgraph UI Layer (Streamlit App)
-        App[app.py] -->|Incorporate| Pre & Sim & Shap & Heat & Rec
-        App -->|Renders| UI[User Interface]
-        UI -->|Interactions| Map[India Heat Map]
-        UI -->|What-If| Twin[Digital Twin Console]
-        UI -->|Explain| SHAP_UI[SHAP Bar Chart]
-        UI -->|Optimize| Budget[Budget ROI Solver]
-        UI -->|Consult| Chat[AI Planner Assistant]
-    end
-```
-# Dashboard
+# Architecture
 
 ![Architecture](architecture.png)
 
