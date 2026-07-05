@@ -4,6 +4,12 @@
 UrbanCool AI is a high-fidelity planning and simulation platform designed to model, explain, and mitigate the **Urban Heat Island (UHI)** effect across 50 major cities in India. Aligned with **UN SDG Goal 11 (Sustainable Cities and Communities)**, the system enables civil planners to adjust zoning variables, simulate heat reductions in a digital twin environment, analyze local risk coefficients, and optimize cooling budgets.
 
 ---
+## 🌐 Project Links
+
+| Resource | Link |
+|----------|------|
+| 🚀 Live Demo | https://your-app-name.streamlit.app |
+| 📂 GitHub Repository | https://github.com/pushpa2210/UrbanCool-AI |
 
 ## 🗺️ System Architecture
 
@@ -43,14 +49,10 @@ UrbanCool AI is structured as a modular four-layer system:
 ### 1. Land Surface Temperature (LST) Generation
 The baseline dataset models temperature fluctuations based on solar radiation, density factors, and mitigating surfaces:
 
-$$LST = \text{base\_lst} + 0.015 \cdot \text{SolarRad} + 0.18 \cdot \text{BuildingDensity} + 0.10 \cdot \text{RoadDensity} + 0.01 \cdot \frac{\text{PopDensity}}{1000} - 0.20 \cdot \text{GreenCover} - 0.15 \cdot \text{WaterBody} - 12.0 \cdot \text{Albedo} - 0.15 \cdot \text{WindSpeed} - 0.05 \cdot \text{Humidity} - 0.003 \cdot \text{Elevation} + 0.02 \cdot \text{AQI} - 0.10 \cdot \text{SurfaceMoisture} + \epsilon$$
-
-Where $\epsilon \sim \mathcal{N}(0, 0.5)$ represents atmospheric noise, and $\text{base\_lst}$ is adjusted dynamically according to regional climate baselines (e.g., higher for desert zones like Jaipur, lower for mountain zones like Srinagar).
+Where represents atmospheric noise is adjusted dynamically according to regional climate baselines (e.g., higher for desert zones like Jaipur, lower for mountain zones like Srinagar).
 
 ### 2. Heat Risk Index Calculation
 The Heat Risk Index normalizes features into a 0-100 range and combines them using the following weights:
-
-$$\text{Score}_{raw} = (0.45 \cdot \text{LST}_n) + (0.20 \cdot \text{BD}_n) + (0.15 \cdot \text{AQI}_n) + (0.10 \cdot \text{Humidity}_n) - (0.20 \cdot \text{GreenCover}_n) - (0.05 \cdot \text{WindSpeed}_n)$$
 
 The raw score is mapped to a $0 - 100$ scale and categorized:
 * **Score < 35**: Low Risk / Cool (Emerald Green)
