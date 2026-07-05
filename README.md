@@ -10,10 +10,9 @@ UrbanCool AI is a high-fidelity planning and simulation platform designed to mod
 |----------|------|
 | 🚀 Live Demo | [https://your-app-name.streamlit.app](https://urbancool-ai-ccwpisrkiz9ktrrepqc7jj.streamlit.app/) |
 | 📂 GitHub Repository | https://github.com/pushpa2210/UrbanCool-AI |
-## 👩‍💻 Connect with Me
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/pushpa-latha-gorle-52586b297/)
-
+# 👩‍💻 Connect with Me
+| 💼 LinkedIn Profile | [Pushpa Latha G](https://www.linkedin.com/in/your-linkedin-profile/) |
 📧 Email: pushpag2210@gmail.com
 ## 🗺️ System Architecture
 
